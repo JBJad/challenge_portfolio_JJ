@@ -20,13 +20,15 @@ class TestLoginPage(unittest.TestCase):
     def testLogIn(self):
         user_login = LoginPage(self.driver)
         user_login.getting_the_title()
-        user_login.
+        time.sleep(5)
+        user_login.comparing_text()
+        time.sleep(5)
         user_login.type_in_email('user02@getnada.com')
         user_login.type_in_password('Test-1234')
         user_login.click_on_sign_in_button()
         dashboard_page = Dashboard(self.driver)
         dashboard_page.getting_the_title()
-        time.sleep(5)
+        time.sleep(2)
 
     @classmethod
     def tearDown(self):
