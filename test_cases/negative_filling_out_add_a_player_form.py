@@ -3,10 +3,13 @@ import unittest
 
 from selenium import webdriver
 
-from pages.dashboard import Dashboard
+from pages.add_a_player import AddAPlayer
 from pages.login_page import LoginPage
+from pages.dashboard import Dashboard
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
-class TestLoginPage(unittest.TestCase):
+
+
+class NegativeTestAddingAPlayer(unittest.TestCase):
 
     @classmethod
     def setUp(self):
@@ -18,13 +21,18 @@ class TestLoginPage(unittest.TestCase):
 
     def testLogIn(self):
         user_login = LoginPage(self.driver)
-        user_login.getting_the_title()
-        user_login.comparing_title_text()
         user_login.type_in_email('user02@getnada.com')
         user_login.type_in_password('Test-1234')
         user_login.click_on_sign_in_button()
         dashboard_page = Dashboard(self.driver)
-        dashboard_page.getting_the_title()
+        dashboard_page.click_on_add_a_player_hyperlink()
+        adding_a_player_page = AddAPlayer(self.driver)
+        adding_a_player_page.type_in_player_name('Krystian')
+        adding_a_player_page.type_in_player_surname('Kowalski')
+        adding_a_player_page.type_in_player_age('10-04-1990')
+        adding_a_player_page.type_in_player_main_position('')
+        adding_a_player_page.submit_the_add_a_player_form()
+        adding_a_player_page.comparing_text_when_a_required_field_is_empty()
 
     @classmethod
     def tearDown(self):

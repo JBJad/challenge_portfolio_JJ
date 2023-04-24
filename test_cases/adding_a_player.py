@@ -4,12 +4,12 @@ import unittest
 
 from selenium import webdriver
 
-from pages.add_a_player import AddAPlayer
 from pages.dashboard import Dashboard
 from pages.login_page import LoginPage
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 
-class TestAddingAPlayer(unittest.TestCase):
+
+class TestClickingOnAddAPlayer(unittest.TestCase):
 
     @classmethod
     def setUp(self):
@@ -27,10 +27,7 @@ class TestAddingAPlayer(unittest.TestCase):
         user_login.click_on_sign_in_button()
         dashboard_page = Dashboard(self.driver)
         dashboard_page.getting_the_title()
-        time.sleep(5)
-        adding_a_player_page = AddAPlayer(self.driver)
-        adding_a_player_page.click_on_add_a_player_hyperlink()
-        adding_a_player_page.getting_the_title()
+        dashboard_page.click_on_add_a_player_hyperlink()
         time.sleep(5)
 
     @classmethod

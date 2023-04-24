@@ -6,9 +6,18 @@ class Dashboard(BasePage):
     expected_title = 'Scouts panel'
     dashboard_url = 'https://scouts-test.futbolkolektyw.pl/'
 
+    adding_a_player_url = 'https://scouts-test.futbolkolektyw.pl/en/players/add'
+    adding_a_player_hyperlink_xpath = "//div[2]/div/div/a/button/span[1]"
+
+    activity_text_xpath = '//div[3]/div/div/h2'
+
     def getting_the_title(self):
-        time.sleep(5)
+        self.wait_for_element_to_be_visible(self.activity_text_xpath)
         assert self.get_page_title(self.dashboard_url) == self.expected_title
+
+    def click_on_add_a_player_hyperlink(self):
+        self.click_on_the_element(self.adding_a_player_hyperlink_xpath)
+
 
     main_page_hyperlink_xpath = "//ul[1]/div[1]"
     players_page_hyperlink_xpath = "//ul[1]/div[2]"

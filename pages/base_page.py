@@ -1,6 +1,9 @@
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
+from selenium.webdriver.support.wait import WebDriverWait
 
+import time
 
 class BasePage():
 
@@ -27,3 +30,13 @@ class BasePage():
         element = driver.find_element(by=By.XPATH, value=xpath)
         element_text = element.text
         assert expected_text == element_text
+
+    def wait_for_element_to_be_clickable(self, selector, selector_type=By.XPATH):
+        wait = WebDriverWait(self.driver, 10)
+        element = wait.until(EC.element_to_be_clickable((selector_type, selector)))
+        time.sleep(3)
+
+    def wait_for_element_to_be_visible(self, selector, selector_type=By.XPATH):
+        wait = WebDriverWait(self.driver, 10)
+        element = wait.until(EC.visibility_of_element_located((selector_type, selector)))
+        time.sleep(3)
