@@ -26,3 +26,11 @@ Moim celem jest zapoznanie się z podstawami testowania automatycznego. Obecnie 
   - //*[@id="__next"]/form/div/div[2]/button/span[1]
   - //*[@id="__next"]/form/div/div[2]/button
   - //*[@type='submit']
+
+# Zadanie 3: Pierwszy test automatyczny i asserty
+
+Nauczyliśmy się tworzyć przypadki testowe i asserty.
+
+# Zadanie 4: Refactor, debugger i przypadki testowe
+
+Link do OneDrive: https://drive.google.com/drive/folders/1ejGUjIJw7-gvly11MTc8FLt4sP51KV9r?usp=share_link 
