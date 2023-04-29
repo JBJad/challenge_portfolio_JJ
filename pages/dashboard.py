@@ -1,8 +1,8 @@
 import time
 from pages.base_page import BasePage
 
-class Dashboard(BasePage):
 
+class Dashboard(BasePage):
     expected_title = 'Scouts panel'
     dashboard_url = 'https://scouts-test.futbolkolektyw.pl/'
 
@@ -17,7 +17,6 @@ class Dashboard(BasePage):
 
     def click_on_add_a_player_hyperlink(self):
         self.click_on_the_element(self.adding_a_player_hyperlink_xpath)
-
 
     main_page_hyperlink_xpath = "//ul[1]/div[1]"
     players_page_hyperlink_xpath = "//ul[1]/div[2]"
