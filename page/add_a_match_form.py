@@ -1,4 +1,4 @@
-from pages.base_page import BasePage
+from page.base_page import BasePage
 
 class AddAMatchForm(BasePage):
     players_team_field_xpath = "//input[@name='myTeam']"

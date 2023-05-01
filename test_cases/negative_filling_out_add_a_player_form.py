@@ -3,9 +3,9 @@ import unittest
 
 from selenium import webdriver
 
-from pages.add_a_player import AddAPlayer
-from pages.login_page import LoginPage
-from pages.dashboard import Dashboard
+from page.add_a_player import AddAPlayer
+from page.login_page import LoginPage
+from page.dashboard import Dashboard
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 
 

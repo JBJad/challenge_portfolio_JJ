@@ -1,5 +1,5 @@
 import time
-from pages.base_page import BasePage
+from page.base_page import BasePage
 
 
 class Dashboard(BasePage):

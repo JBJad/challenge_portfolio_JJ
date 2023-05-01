@@ -3,7 +3,7 @@ import time
 import unittest
 
 from selenium import webdriver
-from pages.login_page import LoginPage
+from page.login_page import LoginPage
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 
 

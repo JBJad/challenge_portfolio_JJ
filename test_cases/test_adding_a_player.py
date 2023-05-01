@@ -4,8 +4,8 @@ import unittest
 
 from selenium import webdriver
 
-from pages.dashboard import Dashboard
-from pages.login_page import LoginPage
+from page.dashboard import Dashboard
+from page.login_page import LoginPage
 from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
 
 
