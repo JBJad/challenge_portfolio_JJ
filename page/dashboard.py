@@ -4,9 +4,9 @@ from page.base_page import BasePage
 
 class Dashboard(BasePage):
     expected_title = 'Scouts panel'
-    dashboard_url = 'https://scouts-test.futbolkolektyw.pl/'
+    dashboard_url = 'https://scouts.futbolkolektyw.pl'
 
-    adding_a_player_url = 'https://scouts-test.futbolkolektyw.pl/en/players/add'
+    adding_a_player_url = 'https://scouts.futbolkolektyw.pl/en/players/add'
     adding_a_player_hyperlink_xpath = "//div[2]/div/div/a/button/span[1]"
 
     activity_text_xpath = '//div[3]/div/div/h2'

@@ -5,7 +5,7 @@ from selenium.webdriver.remote.webdriver import WebDriver
 
 class LoginPage(BasePage):
     expected_title = 'Scouts panel - sign in'
-    login_url = 'https://scouts-test.futbolkolektyw.pl/en/login?redirected=true'
+    login_url = 'https://scouts.futbolkolektyw.pl/en/login?redirected=true'
 
     expected_title_text = 'Scouts Panel'
     expected_title_text_xpath = '//div/div[1]/h5'

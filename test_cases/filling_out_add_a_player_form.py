@@ -15,7 +15,7 @@ class TestAddingAPlayer(unittest.TestCase):
     def setUp(self):
         os.chmod(DRIVER_PATH, 755)
         self.driver = webdriver.Chrome(executable_path=DRIVER_PATH)
-        self.driver.get('https://scouts-test.futbolkolektyw.pl/en/login?redirected=true')
+        self.driver.get('https://scouts.futbolkolektyw.pl/')
         self.driver.fullscreen_window()
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
 
@@ -32,6 +32,7 @@ class TestAddingAPlayer(unittest.TestCase):
         adding_a_player_page.type_in_player_age('10-04-1990')
         adding_a_player_page.type_in_player_main_position('offense')
         adding_a_player_page.submit_the_add_a_player_form()
+        dashboard_page.getting_the_title()
 
     @classmethod
     def tearDown(self):
